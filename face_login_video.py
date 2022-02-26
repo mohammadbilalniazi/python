@@ -20,23 +20,11 @@ def login_face_authentication():
 
     cap=cv2.VideoCapture(0)
 
-    #bilal1_img=face_recognition.load_image_file(r"D:\python\AI\vision\documents\images_videos\bilal.jpeg")
-    bilal2_img=face_recognition.load_image_file(r"D:\python\AI\vision\documents\images_videos\bilal.jpg")
-    #muthasim_image=face_recognition.load_image_file(r"D:\python\AI\vision\documents\images_videos\muthasim.png")
 
-    #b1face_loc=face_recognition.face_locations(bilal1_img)
-    #bilal1_encoding=face_recognition.face_encodings(bilal1_img,b1face_loc)
+    bilal2_img=face_recognition.load_image_file(r"D:\python\AI\vision\documents\images_videos\bilal.jpg")     #your image
 
     b2face_loc=face_recognition.face_locations(bilal2_img)#print(b2face_loc)
     bilal2_encoding=face_recognition.face_encodings(bilal2_img,b2face_loc)[0]    #print(bilal2_encoding) # [array(encodings)]   arr[0]
-
-    #muthasim_face_loc=face_recognition.face_locations(muthasim_image)#print(b2face_loc)
-    #muthasim_encoding=face_recognition.face_encodings(muthasim_image,muthasim_face_loc)    #print(bilal2_encoding) # [array(encodings)]   arr[0]
-    #print(muthasim_encoding[0].shape)            #128
-
-    #result=face_recognition.compare_faces([bilal1_encoding[0]],bilal2_encoding[0])
-
-    #known_encodings_database=[bilal2_encoding[0],muthasim_encoding[0]]
     known_names=['bilal2','muthasim']
     #result=False
     while True:
@@ -81,7 +69,6 @@ def login_face_authentication():
             cv2.destroyAllWindows()
 
 login_face_authentication()
-#login_face_authentication()
 
 
         
