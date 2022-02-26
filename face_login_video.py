@@ -1,9 +1,8 @@
 import face_recognition
 import cv2
 import numpy as np
-from application import *
 import os,sys
-import cv2
+
 
 
 
